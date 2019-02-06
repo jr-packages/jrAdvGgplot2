@@ -1,0 +1,25 @@
+Package: jrAdvGgplot2
+Type: Package
+Title: The jrAdvGgplot2 package
+Version: 0.1.0
+Authors@R: person("Colin", "Gillespie",
+    email="colin@jumpingrivers.com", 
+    role = c("aut", "cre"))
+Maintainer: Colin Gillespie
+    <colin@jumpingrivers.com>
+Description: An R package for the Advanced R programming run by Jumping Rivers.
+URL: https://jumpingrivers.com
+VignetteBuilder: knitr
+License: GPL-3 | GPL-2
+Encoding: UTF-8
+Depends:
+    R (>= 3.1)
+Imports:
+    pryr,
+    hexbin,
+    ggplot2,
+    ggplot2movies,
+    quantreg,
+Suggests:
+    knitr, fortunes, tufte, rmarkdown
+RoxygenNote: 6.1.1
