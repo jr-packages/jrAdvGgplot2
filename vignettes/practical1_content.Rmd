@@ -117,7 +117,7 @@ f(10)
 ##Nothing strange here. We just get
 f(10)
 ```
-1. A bit more tricky
+2. A bit more tricky
 ```{r, results='hide', echo = TRUE}
 f = function(x) {
   f = function(x) {
@@ -128,7 +128,7 @@ f = function(x) {
 }
 f(10)
 ```
-1. More complex
+3. More complex
 ```{r, results='hide', echo = TRUE}
 f = function(x) {
   f = function(x) {
@@ -144,7 +144,7 @@ f = function(x) {
 f(10)
 ```
 
-```{r}
+```{r, message = FALSE}
 ## Solution: The easiest way to understand is to use print statements
 f = function(x) {
   f = function(x) {
@@ -164,7 +164,6 @@ f(10)
 ```
 
 
-1. 
 ```{r, results='hide'}
 f = function(x) {
   f = function(x) {
@@ -189,8 +188,7 @@ f(10)
 ## Solutions
 
 Solutions are contained within the course package
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo = TRUE}
 library("jrAdvGgplot2")
 vignette("solutions1", package="jrAdvGgplot2")
-```
 ```
