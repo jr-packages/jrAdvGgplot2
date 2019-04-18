@@ -85,7 +85,7 @@ setMethod("[<-", signature=c("Cohort"),
 )
 coh_s4[1,]= 5
 
-## ----eval=FALSE----------------------------
-#  library("jrAdvanced")
-#  vignette("solutions3", package="jrAdvanced")
+## ----eval=FALSE, echo=TRUE-----------------
+#  library("jrAdvGgplot2")
+#  vignette("solutions3", package="jrAdvGgplot2")
 

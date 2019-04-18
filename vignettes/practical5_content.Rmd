@@ -153,7 +153,7 @@ g2 = g + geom_point() + stat_smooth(aes(colour=drv))
 ## Solutions
 
 Solutions are contained within this package:
-```{r,eval=FALSE}
+```{r,eval=FALSE, echo = TRUE}
 library(jrAdvGgplot2)
-vignette("solutions2", package="jrAdvGgplot2")
+vignette("solutions5", package="jrAdvGgplot2")
 ```

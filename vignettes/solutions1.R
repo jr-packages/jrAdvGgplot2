@@ -2,24 +2,6 @@
 library(tufte)
 knitr::opts_chunk$set(results = "hide", echo = TRUE)
 
-## ---- eval=FALSE, echo = TRUE--------------
-#  file.exists("~/.Rprofile")
-
-## ---- message=FALSE, echo = TRUE-----------
-if(interactive()) {
-   message("Successfully loaded .Rprofile at ", date(), "\n")
-}
-
-## ---- eval=FALSE, tidy=FALSE, echo = TRUE----
-#  options(prompt="R> ", digits=4,
-#          show.signif.stars=FALSE)
-
-## ---- eval=FALSE, tidy=FALSE, echo = TRUE----
-#  r = getOption("repos")
-#  r["CRAN"] = "http://cran.rstudio.com/"
-#  options(repos = r)
-#  rm(r)
-
 ## ---- tidy=FALSE, echo = TRUE--------------
 arg_explore = function(arg1, rg2, rg3)
     paste("a1, a2, a3 = ", arg1, rg2, rg3)
@@ -121,7 +103,7 @@ f = function(x) {
 }
 f(10)
 
-## ------------------------------------------
+## ---- message = FALSE----------------------
 ## Solution: The easiest way to understand is to use print statements
 f = function(x) {
   f = function(x) {
@@ -157,80 +139,7 @@ f(10)
 ## ----  results='hide'----------------------
 ##Solution: The easiest way to understand is to use print statements as above
 
-## ------------------------------------------
-poisson = function(lambda) {
-     r = function(n=1) rpois(n, lambda)
-     d = function(x, log=FALSE) dpois(x, lambda, log=log)
-     return(list(r=r, d=d))
-}
-
-## ------------------------------------------
-geometric = function(prob) {
-     r = function(n=1) rgeom(n, prob)
-     d = function(x, log=FALSE) dgeom(x, prob, log=log)
-     return(list(r=r, d=d))
-}
-
-## ---- randu, results="hide", echo = FALSE----
-##Solutions
-randu = function(seed) {
-  state = seed
-  calls = 0 #Store the number of calls
-  r = function() {
-    state <<- (65539*state) %% 2^31
-    ## Update the variable outside of this enviroment
-    calls <<- calls + 1
-    state/2^31
-  }
-  set_state = function(initial) state <<- initial
-  get_state = function() state
-  get_seed = function() seed
-  get_num_calls = function() calls
-  list(r=r, set_state=set_state, get_state=get_state,
-       get_seed = get_seed, get_num_calls=get_num_calls)
-}
-r = randu(10)
-r$r()
-r$get_state()
-r$get_seed()
-
-## ---- echo = TRUE--------------------------
-r = randu(10)
-r$r()
-r$get_state()
-r$get_seed()
-
-## ---- echo = TRUE--------------------------
-r = randu(10)
-r$get_num_calls()
-r$r()
-r$r()
-r$get_num_calls()
-
-## ---- randu--------------------------------
-##Solutions
-randu = function(seed) {
-  state = seed
-  calls = 0 #Store the number of calls
-  r = function() {
-    state <<- (65539*state) %% 2^31
-    ## Update the variable outside of this enviroment
-    calls <<- calls + 1
-    state/2^31
-  }
-  set_state = function(initial) state <<- initial
-  get_state = function() state
-  get_seed = function() seed
-  get_num_calls = function() calls
-  list(r=r, set_state=set_state, get_state=get_state,
-       get_seed = get_seed, get_num_calls=get_num_calls)
-}
-r = randu(10)
-r$r()
-r$get_state()
-r$get_seed()
-
-## ---- eval=FALSE---------------------------
-#  library("jrAdvanced")
-#  vignette("solutions1", package="jrAdvanced")
+## ---- eval=FALSE, echo = TRUE--------------
+#  library("jrAdvGgplot2")
+#  vignette("solutions1", package="jrAdvGgplot2")
 

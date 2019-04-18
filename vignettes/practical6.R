@@ -146,5 +146,5 @@ g +  geom_dotplot(binaxis="y", stackdir="center",
 
 ## ----eval=FALSE, echo = TRUE---------------
 #  library(jrAdvGgplot2)
-#  vignette("solutions3", package="jrAdvGgplot2")
+#  vignette("solutions6", package="jrAdvGgplot2")
 

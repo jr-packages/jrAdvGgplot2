@@ -71,7 +71,7 @@ g2
 ## ------------------------------------------
 g2 = g + geom_point() + stat_smooth(aes(colour=drv))
 
-## ----eval=FALSE----------------------------
+## ----eval=FALSE, echo = TRUE---------------
 #  library(jrAdvGgplot2)
-#  vignette("solutions2", package="jrAdvGgplot2")
+#  vignette("solutions5", package="jrAdvGgplot2")
 
