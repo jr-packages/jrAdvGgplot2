@@ -83,7 +83,7 @@ args('[.data.frame')
 }
 ```
 16. Create a `[<-` method for the `cohort` class. This method should allow us to replace values in the `details` data frame, i.e.
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo = TRUE}
 cc[1,1] = 10
 ```
 ```{r , eval = FALSE}
