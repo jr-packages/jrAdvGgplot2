@@ -248,5 +248,3 @@ lecturers' attractiveness affected their course evaluation.\cite{Hamermesh2003} 
   keep 5 in mind as an average. The scores were then normalised.
 
 Table 2 gives the first few rows of the data set.
-
-
