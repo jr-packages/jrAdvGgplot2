@@ -21,4 +21,3 @@ knitr::opts_chunk$set(results = "hide", echo = FALSE)
 
 ```{r child = 'practical3_content.Rmd'}
 ```
-  

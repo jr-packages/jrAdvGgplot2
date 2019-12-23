@@ -30,21 +30,21 @@ arg_explore(1, 3, rg = 1)
 Following on from the above example, can you predict what will happen with
 
 ```{r, fig.keep="none", echo = TRUE}
-plot(type="l", 1:10, 11:20)
+plot(type = "l", 1:10, 11:20)
 ```
 
 \noindent and
 
 ```{r, results='hide', echo = TRUE}
-rnorm(mean=4, 4, n=5)
+rnorm(mean = 4, 4, n = 5)
 ```
 
 ```{r, tidy=FALSE, results='hide', fig.keep='none'}
 ## SOLUTION
 #plot(type="l", 1:10, 11:20) is equivilent to
-plot(x=1:10, y=11:20, type="l")
+plot(x = 1:10, y = 11:20, type = "l")
 #rnorm(mean=4, 4, n=5) is equivilent to
-rnorm(n=5, mean=4, sd=4)
+rnorm(n = 5, mean = 4, sd = 4)
 ```
 
 ## Functions as first class objects
@@ -72,13 +72,13 @@ stat_ana = function(x, y, trans=NULL) {
 - Use `is.function()` to test whether a function has been passed to `trans`, transform the vectors `x` and `y` when appropriate. For
   example,
 ```{r, eval=FALSE, echo = TRUE}
-stat_ana(x, y, trans=log)
+stat_ana(x, y, trans = log)
 ```
 \noindent would take log's of `x` and `y`.
 ```{r,  tidy=FALSE, results='hide', fig.keep='none'}
 ## SOLUTION
 stat_ana = function(x, y, trans=NULL) {
-  if(is.function(trans)) {
+  if (is.function(trans)) {
     x = trans(x)
     y = trans(y)
   }
@@ -92,7 +92,7 @@ stat_ana = function(x, y, trans=NULL) {
 ```{r,  tidy=FALSE, results='hide', fig.keep='none'}
 ## SOLUTION
 stat_ana = function(x, y, trans=NULL) {
-  if(is.function(trans)) {
+  if (is.function(trans)) {
     x = trans(x)
     y = trans(y)
   } else if (trans == "normalise") {
@@ -190,5 +190,5 @@ f(10)
 Solutions are contained within the course package
 ```{r, eval=FALSE, echo = TRUE}
 library("jrAdvGgplot2")
-vignette("solutions1", package="jrAdvGgplot2")
+vignette("solutions1", package = "jrAdvGgplot2")
 ```
